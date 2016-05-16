@@ -69,31 +69,31 @@ extern "C" {
 
   - (void)maioWillStartAd:(NSString *)zoneId {
     if (_startAdCallback) {
-      _startAdCallback([zoneId UTF8String]);
+      _startAdCallback(MaioMakeStringCopy([zoneId UTF8String]));
     }
   }
 
   - (void)maioDidFinishAd:(NSString *)zoneId playtime:(NSInteger)playtime skipped:(BOOL)skipped rewardParam:(NSString *)rewardParam {
     if (_finishedAdCallback) {
-      _finishedAdCallback([zoneId UTF8String], (int)playtime, skipped, [rewardParam UTF8String]);
+      _finishedAdCallback(MaioMakeStringCopy([zoneId UTF8String]), (int)playtime, skipped, [rewardParam UTF8String]);
     }
   }
 
   - (void)maioDidClickAd:(NSString *)zoneId {
     if (_clickedAdCallback) {
-      _clickedAdCallback([zoneId UTF8String]);
+      _clickedAdCallback(MaioMakeStringCopy([zoneId UTF8String]));
     }
   }
 
   - (void)maioDidCloseAd:(NSString *)zoneId {
     if (_closedAdCallback) {
-      _closedAdCallback([zoneId UTF8String]);
+      _closedAdCallback(MaioMakeStringCopy([zoneId UTF8String]));
     }
   }
 
   - (void)maioDidFail:(NSString *)zoneId reason:(MaioFailReason)reason {
     if (_failedCallback) {
-      _failedCallback([zoneId UTF8String], reason);
+      _failedCallback(MaioMakeStringCopy([zoneId UTF8String]), reason);
     }
   }
 
@@ -101,6 +101,10 @@ extern "C" {
   
 
   static MaioDelegateImpl *s_maioDelegate;
+
+  const char* _SdkVersion() {
+    return MaioMakeStringCopy([[Maio sdkVersion] UTF8String]);
+  }
 
   void _SetAdTestMode (bool adTestMode) {
     [Maio setAdTestMode: adTestMode];

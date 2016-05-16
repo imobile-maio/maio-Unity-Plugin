@@ -44,6 +44,27 @@ public static class Maio {
 	
 
 	/// <summary>
+	/// maio iOS SDK のバージョンを返します。
+	/// </summary>
+	/// <value>maio iOS SDK のバージョン</value>
+	public static string SdkVersion {
+		get {
+			#if UNITY_IOS && !UNITY_EDITOR
+			if (Application.platform != RuntimePlatform.OSXEditor) {
+				return _SdkVersion();
+			}
+			else {
+				return null;
+			}
+			#elif UNITY_ANDROID && !UNITY_EDITOR
+			return null;
+			#else
+			return null;
+			#endif
+		}
+	}
+
+	/// <summary>
 	/// 広告の配信テストを行うかどうかを設定します。
 	/// </summary>
 	/// <param name="adTestMode">広告のテスト配信を行う場合には <c>true</>、それ以外なら <c>false</c>。アプリ開発中は <c>true</c> にし、ストアに提出する際には <c>false</c> にして下さい（既定値は <c>false</c>）。</param>
@@ -127,6 +148,8 @@ public static class Maio {
 	#region Internal
 	
 	#if UNITY_IOS && !UNITY_EDITOR
+	[DllImport("__Internal")]
+	private static extern string _SdkVersion();
 	[DllImport("__Internal")]
 	private static extern void _SetAdTestMode(bool adTestMode);
 	[DllImport("__Internal")]

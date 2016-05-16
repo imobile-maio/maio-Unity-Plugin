@@ -18,6 +18,11 @@
 @interface Maio: NSObject
 
 /**
+ *  maio SDK のバージョンを返します。
+ */
++ (NSString *)sdkVersion;
+
+/**
  *  広告の配信テストを行うかどうかを設定します。
  *
  *  @param adTestMode    広告のテスト配信を行う場合には YES、それ以外なら NO。アプリ開発中は YES にし、ストアに提出する際には NO にして下さい（既定値は NO）。

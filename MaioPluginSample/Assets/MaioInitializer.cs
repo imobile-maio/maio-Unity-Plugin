@@ -7,6 +7,8 @@ public class MaioInitializer : MonoBehaviour {
 	public const string MEDIA_ID = "DemoPublisherMedia";
 	
 	void Start() {
+		Debug.Log("maio iOS SDK " + Maio.SdkVersion);
+
 		Button btnAdZone = GameObject.Find ("btnAdZone").GetComponent<Button>();
 		btnAdZone.onClick.AddListener (() => {
 			// 動画広告を表示
