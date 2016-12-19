@@ -3,7 +3,7 @@
 # maio-Unity-Plugin
 
 * Unity Plugin Version: 1.0.3
-* iOS SDK Version: 1.0.10
+* iOS SDK Version: 1.2.2
 
 ※ MaioPluginSample サンプルプロジェクトは Unity 5 以降で実行できます。
 
