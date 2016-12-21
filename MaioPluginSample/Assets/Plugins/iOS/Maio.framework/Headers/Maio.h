@@ -9,11 +9,14 @@
 #import <AVFoundation/AVFoundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <StoreKit/StoreKit.h>
 #import <sys/sysctl.h>
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_5_0
 #import <AdSupport/AdSupport.h> // idfaの取得 用
 #endif
 #import <Maio/MaioDelegate.h>
+
+@class MaioInstance;
 
 @interface Maio: NSObject
 
@@ -74,4 +77,24 @@ __attribute__((deprecated("Deprecated on Release build")))
 + (void)showWithViewController:(UIViewController *)vc;
 + (void)showAtZoneId:(NSString *)zoneEid vc:(UIViewController *)vc;
 
++ (MaioInstance *)startWithNonDefaultMediaId:(NSString *)mediaEid delegate:(id<MaioDelegate>)delegate;
+
 @end
+
+
+@interface MaioInstance : NSObject
+
+@property (nonatomic, readonly) NSString *mediaId;
+@property (nonatomic) BOOL adTestMode;
+@property (nonatomic) id<MaioDelegate> delegate;
+
+- (BOOL)canShow;
+- (BOOL)canShowAtZoneId:(NSString *)zoneId;
+- (void)show;
+- (void)showAtZoneId:(NSString *)zoneId;
+
+- (void)showWithViewController:(UIViewController *)vc;
+- (void)showAtZoneId:(NSString *)zoneEid vc:(UIViewController *)vc;
+
+@end
+
