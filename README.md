@@ -2,7 +2,7 @@
 
 # maio-Unity-Plugin
 
-* Unity Plugin Version: 1.1.1
+* Unity Plugin Version: 1.1.2
 * iOS SDK Version: 1.2.5
 * Android SDK Version: 1.1.3
 
