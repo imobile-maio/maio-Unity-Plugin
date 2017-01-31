@@ -2,9 +2,9 @@
 
 # maio-Unity-Plugin
 
-* Unity Plugin Version: 1.1.1
-* iOS SDK Version: 1.2.4
-* Android SDK Version: 1.0.3-a
+* Unity Plugin Version: 1.1.2
+* iOS SDK Version: 1.2.5
+* Android SDK Version: 1.0.3
 
 ※ MaioPluginSample サンプルプロジェクトは Unity 5 以降で実行できます。
 
