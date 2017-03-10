@@ -4,7 +4,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 
 public static class Maio {
-    private const string PLUGIN_VERSION = "1.1.1";
+    private const string PLUGIN_VERSION = "1.1.3";
 
     /// <summary>
     /// maio SDK のエラー種別（アプリ側への通知内容）
