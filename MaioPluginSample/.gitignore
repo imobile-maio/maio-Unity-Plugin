@@ -27,3 +27,6 @@ sysinfo.txt
 
 *.DS_Store
 __MACOSX
+
+# ide setting files
+.consulo
