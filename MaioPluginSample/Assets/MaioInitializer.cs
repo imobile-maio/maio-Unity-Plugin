@@ -23,7 +23,6 @@ public class MaioInitializer : MonoBehaviour {
         Debug.Log(Maio.PluginVersion);
 
         // maio 用のイベントハンドラを設定します。
-        // 必要に応じて、下記コメントアウトを外してください。
         Maio.OnInitialized += HandleOnInitialized;
         Maio.OnChangedCanShow += HandleOnChangedCanShow;
         Maio.OnStartAd += HandleOnStartAd;
@@ -53,6 +52,7 @@ public class MaioInitializer : MonoBehaviour {
 
     void OnDestroy()
     {
+        // シーンが遷移する際にイベントハンドラを解除します。
         Maio.OnInitialized -= HandleOnInitialized;
         Maio.OnChangedCanShow -= HandleOnChangedCanShow;
         Maio.OnStartAd -= HandleOnStartAd;
