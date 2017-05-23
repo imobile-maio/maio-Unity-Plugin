@@ -15,5 +15,8 @@
     - [maio iOS SDK](https://github.com/imobile-maio/maio-iOS-SDK/releases)
     - [maio Android SDK](https://maio.jp/publisher/)
 
+## Get Started
+[wiki/Get-Started](https://github.com/imobile-maio/maio-Unity-Plugin/wiki/Get-Started)
+
 ## API Reference
-https://github.com/imobile-maio/maio-Unity-Plugin/wiki/API-Reference
+[wiki/API-Reference](https://github.com/imobile-maio/maio-Unity-Plugin/wiki/API-Reference)
