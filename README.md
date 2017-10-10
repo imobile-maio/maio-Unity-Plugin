@@ -6,8 +6,8 @@
 
 ## サンプルとして同梱しているSDK
 
-* iOS SDK Version: 1.2.10
-* Android SDK Version: 1.0.4
+* iOS SDK Version: 1.2.16
+* Android SDK Version: 1.0.6
 
 ## 注意
 - MaioPluginSample サンプルプロジェクトは Unity 5 以降で実行できます。
