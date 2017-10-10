@@ -196,7 +196,7 @@ public static class Maio {
     /// </summary>
     /// <param name="adTestMode">広告のテスト配信を行う場合には <c>true</>、それ以外なら <c>false</c>。アプリ開発中は <c>true</c> にし、ストアに提出する際には <c>false</c> にして下さい（既定値は <c>false</c>）。</param>
     public static void SetAdTestMode(bool adTestMode) {
-        Debug.Log(adTestMode);
+        // Debug.Log(adTestMode);
 #if UNITY_IOS && !UNITY_EDITOR
         if (Application.platform != RuntimePlatform.OSXEditor) {
             _SetAdTestMode(adTestMode);
@@ -211,7 +211,7 @@ public static class Maio {
     /// </summary>
     /// <param name="mediaId">管理画面にて発行されるアプリ識別子</param>
     public static void Start(string mediaId) {
-        Debug.Log(mediaId);
+        // Debug.Log(mediaId);
 #if UNITY_IOS && !UNITY_EDITOR
         if (Application.platform != RuntimePlatform.OSXEditor) {
             _Start(mediaId
@@ -239,7 +239,7 @@ public static class Maio {
     /// <param name="zoneId">広告の表示準備が整っているか確認したいゾーンの識別子</param>
     /// <returns></returns>
     public static bool CanShow(string zoneId) {
-        Debug.Log(zoneId);
+        // Debug.Log(zoneId);
 #if UNITY_IOS && !UNITY_EDITOR
         if (Application.platform != RuntimePlatform.OSXEditor) {
             return _CanShow(zoneId);
@@ -266,7 +266,7 @@ public static class Maio {
     /// </summary>
     /// <param name="zoneId">広告を表示したいゾーンの識別子</param>
     public static void Show(string zoneId) {
-        Debug.Log(zoneId);
+        // Debug.Log(zoneId);
 #if UNITY_IOS && !UNITY_EDITOR
         if (Application.platform != RuntimePlatform.OSXEditor) {
             _Show(zoneId);
