@@ -79,7 +79,14 @@ release_if_needed(){
         return 0;
     fi
 
-    echo $(cd $ROOT && git checkout master && git merge --no-ff updateSDKs) > /dev/null
+    local pluginVersion=$(grep "PLUGIN_VERSION\s*=[^=]*;" $SAMPLE_ROOT/Assets/Plugins/Maio.cs |
+        sed -E "s/.*\"([0-9.]*)\".*/\1/")
+    local currentDay=$(date +"%Y%m%d")
+    echo $(cd $ROOT &&
+        git checkout master &&
+        git merge --no-ff updateSDKs &&
+        git tag "v${pluginVersion}_${currentDay}"
+    ) > /dev/null
 }
 
 update_sdk_ios
