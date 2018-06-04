@@ -2,7 +2,7 @@
 
 # maio-Unity-Plugin
 
-* Unity Plugin Version: 1.1.4
+* Unity Plugin Version: 1.1.5
 
 ## サンプルとして同梱しているSDK
 
