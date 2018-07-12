@@ -6,7 +6,7 @@
 
 ## サンプルとして同梱しているSDK
 
-* iOS SDK Version: 1.3.0
+* iOS SDK Version: 1.3.2
 * Android SDK Version: 1.1.0
 
 ## 注意
