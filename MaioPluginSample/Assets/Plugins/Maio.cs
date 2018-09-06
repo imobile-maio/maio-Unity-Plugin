@@ -272,7 +272,13 @@ public static class Maio {
             _Show(zoneId);
         }
 #elif UNITY_ANDROID && !UNITY_EDITOR
-        _maio.CallStatic("show", zoneId);
+        if(zoneId == null)
+        {
+            _maio.CallStatic("show");
+        }
+        else{
+            _maio.CallStatic("show", zoneId);
+        }
 #endif
     }
     /// <summary>
