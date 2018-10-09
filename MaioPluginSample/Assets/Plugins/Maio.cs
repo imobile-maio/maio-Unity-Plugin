@@ -4,7 +4,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 
 public static class Maio {
-    private const string PLUGIN_VERSION = "1.1.5";
+    private const string PLUGIN_VERSION = "1.1.6";
 
     /// <summary>
     /// maio SDK のエラー種別（アプリ側への通知内容）
@@ -272,7 +272,13 @@ public static class Maio {
             _Show(zoneId);
         }
 #elif UNITY_ANDROID && !UNITY_EDITOR
-        _maio.CallStatic("show", zoneId);
+        if(zoneId == null)
+        {
+            _maio.CallStatic("show");
+        }
+        else{
+            _maio.CallStatic("show", zoneId);
+        }
 #endif
     }
     /// <summary>
