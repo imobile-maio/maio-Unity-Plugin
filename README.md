@@ -2,7 +2,7 @@
 
 # maio-Unity-Plugin
 
-* Unity Plugin Version: 1.1.5
+* Unity Plugin Version: 1.1.6
 
 ## サンプルとして同梱しているSDK
 
@@ -10,8 +10,10 @@
 * Android SDK Version: 1.1.5
 
 ## 注意
-- MaioPluginSample サンプルプロジェクトは Unity 5.2.1 以降で実行できます。
-    - ※iOS SDK 1.3.0以降、WebKit.frameworkに依存する都合により。
+- MaioPluginSample サンプルプロジェクトは Unity 5.5.4p5 以降で実行できます。
+    - 開発環境がmacOS High Sierraに移行した都合により。
+    - Unity 5.2.1 ~ 5.5.4p4 で開けるプロジェクトは、tag:`v1.1.5_20180712`をご利用ください。
+        - ※iOS SDK 1.3.0以降、WebKit.frameworkに依存する都合により。
     - Unity 5.0 ~ 5.2.0 で開けるプロジェクトは、tag:`v1.1.4_20171114`をご利用ください。
 - SDKはサンプルとして同梱しています。
     - iOS SDKは最新版を配布ページから取得し、差し替えるようにしてください。
