@@ -65,7 +65,7 @@ make_unity_package(){
         return 0;
     fi
 
-    echo $(/Applications/Unity\ 5.2.1/Unity\ 5.2.1.app/Contents/MacOS/Unity \
+    echo $(/Applications/Unity\ 5.5.4p5/Unity\ 5.5.4p5.app/Contents/MacOS/Unity \
         -quit -batchmode -projectPath $SAMPLE_ROOT -exportPackage Assets/Plugins $ROOT/maio.unitypackage) > /dev/null
     echo $(cd $ROOT && git commit -a -m "Unity packageを更新") > /dev/null
 }
