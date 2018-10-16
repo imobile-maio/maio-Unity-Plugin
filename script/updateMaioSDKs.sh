@@ -92,8 +92,9 @@ release_if_needed(){
 update_sdk_ios
 update_sdk_android
 make_unity_package
-release_if_needed
 
-echo $(cd $ROOT && git checkout master && git branch -d updateSDKs) > /dev/null
+# # masterにmergeまで済ませる場合
+# release_if_needed
+# echo $(cd $ROOT && git checkout master && git branch -d updateSDKs) > /dev/null
 
 rm -rf $TMP
