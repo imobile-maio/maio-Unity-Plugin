@@ -7,10 +7,13 @@ public class MaioInitializer : MonoBehaviour {
     /// maio から発行されるメディアIDに差し替えてください。
 #if UNITY_IOS
     public const string MEDIA_ID = "DemoPublisherMedia";
+    public const string ZONE_ID = "DemoPublisherZone";
 #elif UNITY_ANDROID
     public const string MEDIA_ID = "DemoPublisherMediaForAndroid";
+    public const string ZONE_ID = "DemoPublisherZoneForAndroid";
 #else
     public const string MEDIA_ID = "DemoPublisherMedia";
+    public const string ZONE_ID = "DemoPublisherZone";
 #endif
 
     private readonly Queue<Action> _mainQueue = new Queue<Action>();
@@ -64,9 +67,9 @@ public class MaioInitializer : MonoBehaviour {
 
     public void ShowAd()
     {
-        if(Maio.CanShow())
+        if(Maio.CanShow(ZONE_ID))
         {
-            Maio.Show();
+            Maio.Show(ZONE_ID);
         }
     }
 
