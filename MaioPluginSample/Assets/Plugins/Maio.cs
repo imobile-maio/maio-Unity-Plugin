@@ -26,6 +26,12 @@ public static class Maio {
         DownloadCancelled,
         /// 動画再生エラー
         VideoPlayback,
+        /// メディアID異常エラー
+        IncorrectMediaId,
+        /// ゾーンID異常エラー
+        IncorrectZoneId,
+        /// 表示するための要素を見つけられなかった
+        NotFoundViewContext,
     }
 
     public static event InitializedEventHandler OnInitialized;
