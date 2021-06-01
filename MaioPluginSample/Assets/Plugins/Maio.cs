@@ -71,10 +71,9 @@ public static class Maio {
             Maio.OnChangedCanShowEventHandler(zoneId, newValue);
         }
 
-        ////再生直前に呼ばれる処理
-        //public void onOpenAd(string zoneId) {
-        //    Maio.OnOpenAdEventHandler(zoneId);
-        //}
+        //再生直前に呼ばれる処理
+        //iOS側に対応するイベントがないので空のメソッドになっています
+        public void onOpenAd(string zoneId) { }
 
         //再生時に呼ばれる処理
         public void onStartedAd(string zoneId) {
